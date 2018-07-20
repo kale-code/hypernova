@@ -15,7 +15,7 @@ function del(obj) {
 }
 
 function toFastProperties(obj) {
-  (function () {}).prototype = obj;
+  (() => {}).prototype = obj;
 }
 
 Object.keys(Promise.prototype).filter(isNotMethod).forEach(del(Promise.prototype));
